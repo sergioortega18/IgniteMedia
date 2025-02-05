@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
 import useTextRevealAnimation from '@/hooks/useTextRevealAnimation';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 interface TestProps extends HTMLAttributes<HTMLDivElement> {
   quote: string;
