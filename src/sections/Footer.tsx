@@ -39,21 +39,19 @@ const Footer: FC = () => {
     }, [inView, entranceAnimation]);
 
 
-    const handleClickMobileNavItem = (e: MouseEvent<HTMLAnchorElement>) => {
+    const handleClickMobileNavItem = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
-
         const url = new URL(e.currentTarget.href);
         const hash = url.hash;
         const target = document.querySelector(hash);
-        if(!target) return;
-        target.scrollIntoView({behavior: 'smooth'})
-    }
+        if (!target) return;
+        target.scrollIntoView({ behavior: 'smooth' });
+    };
 
     return (
         <footer className='bg-stone-900 text-white' id="contact">
             <div className="px-6 md:px-12 lg:px-20">
                 <div className='section relative'>
-
                     <div className='flex items-center gap-3 pb-6'>
                         <div className='size-3 rounded-full bg-green-400 animate-pulse'></div>
                         <span className='uppercase'>One spot available for the next month</span>
@@ -101,6 +99,3 @@ const Footer: FC = () => {
 
 export default Footer;
 
-function entranceAnimation() {
-    throw new Error('Function not implemented.');
-}
