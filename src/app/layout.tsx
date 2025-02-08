@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Playfair_Display, Source_Sans_3 } from 'next/font/google';
+import { Playfair_Display } from 'next/font/google';
 import localFont from 'next/font/local';
 
 
