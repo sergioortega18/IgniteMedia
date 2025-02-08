@@ -1,6 +1,6 @@
 "use client";
 
-import { inView, motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { useInView  } from 'framer-motion';
 import { FC, useEffect, useRef } from 'react';
 import useTextRevealAnimation from '@/hooks/useTextRevealAnimation';
 import image1 from "@/assets/images/project-1.jpg";
