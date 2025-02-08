@@ -33,7 +33,7 @@ const Header: FC = () => {
                             onClick={handleClickMobileNavItem}
                             className="inline-flex items-center justify-end px-1 py-1 text-[14px] text-[#E61D40]"
                         >
-                            LET'S TALK
+                            LET&apos;S TALK
                         </Link>
                     </nav>
                 </div>
