@@ -8,6 +8,7 @@ import image3 from "@/assets/images/project-3.jpg";
 import image4 from "@/assets/images/project-4.jpg";
 import image5 from "@/assets/images/project-5.jpg";
 import Image from "next/image";
+import { useInView } from 'framer-motion';
 
 const projects = [
     {

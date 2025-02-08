@@ -39,7 +39,7 @@ const Header: FC = () => {
                 </div>
             </header>
 
-            <div className="fixed bottom-0 left-0 w-full p-2 md:p-4 z-10 flex justify-between items-center hidden md:flex">
+            <div className="fixed bottom-0 left-0 w-full p-2 md:p-4 z-10  justify-between items-center hidden md:flex">
                 <div>2025</div>
                 <div>icon</div>
             </div>
