@@ -142,10 +142,10 @@ const About: FC = () => {
             <div className="flex justify-center py-8 md:py-20">
                     <h2 className="text-5xl md:text-8xl lg:text-[234px] flex flex-col overflow-hidden tracking-tighter" ref={titleRef}>
                         <motion.span className="whitespace-nowrap font-serif" style={{ x: transformTop }}>
-                        Get <span className="italic">in </span> Touch Get <span className="italic">in </span> Touch   
+                        &bull; Get in Touch &bull; Get in Touch &bull;
                         </motion.span>
                         <motion.span className="whitespace-nowrap self-end font-serif" style={{ x: transformBottom }}>
-                        Get <span className="italic text-[#E61D40]">in</span> Touch Get <span className="italic text-[#E61D40]">in</span> Touch
+                       &bull; Get <span className="text-[#E61D40]">in</span> Touch &bull; Get <span className="text-[#E61D40]">in</span> Touch
                         </motion.span>
                     </h2>
             </div>

@@ -22,7 +22,7 @@ const Header: FC = () => {
                         <Link
                             href="#hero"
                             onClick={handleClickMobileNavItem}
-                            className="text-[14px] uppercase font-sans text-[#E61D40]"
+                            className="text-[14px] uppercase font-sans"
                         >
                             ignite Media
                         </Link>
@@ -31,7 +31,7 @@ const Header: FC = () => {
                         <Link
                             href="#contact"
                             onClick={handleClickMobileNavItem}
-                            className="inline-flex items-center justify-end px-1 py-1 text-[14px] text-[#E61D40]"
+                            className="inline-flex items-center justify-end px-1 py-1 text-[14px]"
                         >
                             LET&apos;S TALK
                         </Link>

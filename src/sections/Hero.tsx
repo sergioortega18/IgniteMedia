@@ -17,7 +17,7 @@ const Hero: FC = () => {
             className="relative mt-64 md:mt-0 md:h-screen flex flex-col justify-end px-6 pb-12 mb-8">
 
             <motion.div
-                className="text-[13vw] md:text-[14vw] font-serif leading-[1.2] lg:leading-[1.1]"
+                className="text-[14vw] md:text-[14vw] font-serif leading-[1.2] lg:leading-[1] tracking-tight"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 ref={scope}
@@ -26,7 +26,7 @@ const Hero: FC = () => {
                 <br />
                 Growth Studio
                 <br />
-                <span className="italic">from {' '}</span>Medellin
+                <span className='italic'>from{' '}</span> Medellin
             </motion.div>
 
 

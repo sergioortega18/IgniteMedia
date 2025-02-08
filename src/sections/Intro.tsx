@@ -1,7 +1,7 @@
 "use client";
 
-import { useInView  } from 'framer-motion';
-import { FC, useEffect } from 'react';
+import { motion, useInView, useScroll, useTransform  } from 'framer-motion';
+import { FC, useEffect, useRef } from 'react';
 import useTextRevealAnimation from '@/hooks/useTextRevealAnimation';
 import image1 from "@/assets/images/project-1.jpg";
 import image2 from "@/assets/images/project-2.jpg";
@@ -47,6 +47,17 @@ const Intro: FC = () => {
     }, [inView, entranceAnimation]);
 
 
+    
+    const titleRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: titleRef,
+        offset: ['start end', 'end start'],
+    });
+
+    const transformTop = useTransform(scrollYProgress, [0, 1], ["-15%", "20%"]);
+    const transformBottom = useTransform(scrollYProgress, [0, 1], ["20%", "-15%"]);
+    
+
     return (
         <section
             className="section relative"
@@ -55,7 +66,7 @@ const Intro: FC = () => {
         >
             <div className='px-4'>
                 <div
-                    className='text-[#E61D40] text-[16px] md:text-[24px] lg:text-[32px] font-sans font-light leading-[1.2] uppercase'
+                    className='text-[16px] md:text-[24px] lg:text-[32px] font-aeonik font-light leading-[1.2] uppercase'
                     ref={scope}>
                     <p
                         className="md:px-36 pb-8"
@@ -64,7 +75,7 @@ const Intro: FC = () => {
                         Goals in the Digital World.
                     </p>
                     <p
-                        className='md:mb-20 pb-8 md:pl-48 md:pr-20'
+                        className='md:mb-14 pb-8 md:pl-48 md:pr-20'
                     >
                         We specialize in holistic growth solutions for brands across tech, CPG, hospitality, and luxury brands.
                         We specialize in content creation, social media advertising, Google advertising, and event strategy.
@@ -72,6 +83,18 @@ const Intro: FC = () => {
                     </p>
                 </div>
 
+
+                <div className="flex justify-center py-4 md:py-14">
+                    <h2 className="text-[50px] leading-[1] md:text-8xl lg:text-[200px] flex flex-col overflow-hidden tracking-tighter" ref={titleRef}>
+                        <motion.span className="whitespace-nowrap font-serif" style={{ x: transformTop }}>
+                        Marketing Narrates <span className="italic">Convertion{' '} </span> Delivers   
+                        </motion.span>
+                        <motion.span className="whitespace-nowrap self-end font-serif" style={{ x: transformBottom }}>
+                        Marketing Narrates <span className="italic">Convertion{' '} </span> Delivers 
+                        </motion.span>
+                    </h2>
+            </div>
+            
                 <div className="mt-6 md:mt-16">
                     {projects.map(({ name, image }) => (
                         <a
@@ -80,13 +103,12 @@ const Intro: FC = () => {
                             className="md:py-8 flex flex-col relative group/project"
                             aria-label={`View ${name} project`}
                         >
-
                             <div className="absolute bottom-0 left-0 w-full h-0 group-hover/project:h-full transition-all duration-700 bg-stone-300"></div>
 
                             <div className="relative">
                                 <div className="my-4 md:mt-0 flex justify-between items-center md:grid md:[grid-template-columns:1fr_300px_max-content] md:gap-8">
                                     <div className="md:ml-6 lg:group-hover/project:pl-12 transition-all duration-700">
-                                        <h3 className="text-[38px] font-serif md:text-[7vw]">{name}</h3>
+                                        <h3 className="text-[38px] font-serif md:text-[42px] leading-[1]">{name}</h3>
                                     </div>
 
                                     <div className="relative">
@@ -98,6 +120,7 @@ const Intro: FC = () => {
                                             />
                                         </div>
                                     </div>
+
                                     <div className="lg:group-hover/project:px-8 transition-all duration-500">
                                         <div className="size-6 overflow-hidden">
                                             <div className="h-6 w-12 flex group-hover/project:-translate-x-1/2 transition-transform duration-300">
@@ -110,9 +133,10 @@ const Intro: FC = () => {
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                                 <div className="w-full md:hidden">
-                                    <div className="relative w-full pt-[100%]"> {/* 16:9 aspect ratio */}
+                                    <div className="relative w-full pt-[100%]"> 
                                         <Image
                                             src={image}
                                             alt={`${name} image`}

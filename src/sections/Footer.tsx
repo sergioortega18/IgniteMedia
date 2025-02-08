@@ -6,24 +6,20 @@ import { useInView } from 'framer-motion';
 
 const navItems = [
     {
-        label: "About",
+        label: "Lets Talk",
         href: "#intro",
     },
     {
-        label: "Selected Works",
+        label: "Instragram",
+        href: "#intro",
+    },
+    {
+        label: "Facebook",
         href: "#projects",
     },
     {
-        label: "Testimonials",
+        label: "Twitter",
         href: "#testimonials",
-    },
-    {
-        label: "FAQs",
-        href: "#faqs",
-    },
-    {
-        label: "Contact",
-        href: "#contact",
     },
 ];
 
@@ -49,17 +45,17 @@ const Footer: FC = () => {
     };
 
     return (
-        <footer className='bg-stone-900 text-white' id="contact">
+        <footer className='bg-stone-900 text-white font-aeonik' id="contact">
             <div className="px-6 md:px-12 lg:px-20">
                 <div className='section relative'>
                     <div className='flex items-center gap-3 pb-6'>
                         <div className='size-3 rounded-full bg-green-400 animate-pulse'></div>
-                        <span className='uppercase'>One spot available for the next month</span>
+                        <span className='uppercase'>Available Now</span>
                     </div>
 
                     <div className='grid md:grid-cols-3 md:items-center'>
                         <div className='md:col-span-2'>
-                            <h2 className='text-4xl md:text-7xl lg:text-9xl font-serif leading-[1.3]'
+                            <h2 className='text-4xl md:text-7xl lg:text-9xl font-serif leading-[1.5]'
                                 ref={scope}>Enough talk. <span className='italic'>let&apos;s</span> make something great together.
                             </h2>
                             <Button
@@ -81,10 +77,10 @@ const Footer: FC = () => {
                             </Button>
                         </div>
                         <div className='md:col-span-1'>
-                            <nav className='flex md:items-end flex-col gap-8 mt-16 md:mt-0 font-sans'>
+                            <nav className='flex md:items-end flex-col gap-8 mt-16 md:mt-0 font-aeonik'>
                                 {navItems.map(({ href, label }) => (
                                     <a href={href} key={label} onClick={handleClickMobileNavItem}>
-                                        <Button variant="text" className='text-[24px]'>{label}</Button>
+                                        <Button variant="text" className='text-[18px]'>{label}</Button>
                                     </a>
                                 ))}
                             </nav>

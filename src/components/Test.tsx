@@ -56,10 +56,10 @@ const Test = (props: TestProps) => {
         />
       </div>
       <div className="md:col-span-3">
-        <blockquote ref={quoteScope} className="text-2xl font-serif leading-relaxed">
+        <blockquote ref={quoteScope} className="mt-4 text-xl font-serif leading-[1.1]">
           {quote}
         </blockquote>
-        <cite ref={citeScope} className="block mt-4 text-lg font-semibold">
+        <cite ref={citeScope} className="block mt-4 text-lg font-aeonik">
           {name}, {role} at {company}
         </cite>
       </div>

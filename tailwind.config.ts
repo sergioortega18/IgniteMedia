@@ -16,7 +16,8 @@ export default {
     extend: {
       fontFamily: {
         serif: ['var(--font-playfair-display)', 'serif'], // Playfair Display
-        sans: ['var(--font-source-sans-3)', 'sans-serif'], // Source Sans Pro
+        ampersand: ['var(--font-ampersand)'],
+        aeonik: ['var(--font-aeonik)'],
       },
       container: {
         center: true,
