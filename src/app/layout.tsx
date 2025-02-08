@@ -27,9 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfairDisplay.variable} ${sourceSans3.variable}`}>
-      <body className="antialiased bg-[#F8F6F2] text-stone-700">
+      <body className="antialiased bg-[#EFEBE8] text-[#E61D40]">
         {children}
       </body>
     </html>
   );
-}
+} 

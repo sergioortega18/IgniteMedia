@@ -46,8 +46,6 @@ const About: FC = () => {
 
     const transformTop = useTransform(scrollYProgress, [0, 1], ["-10%", "15%"]);
     const transformBottom = useTransform(scrollYProgress, [0, 1], ["10%", "-15%"]);
-
-
     
     const sectionRef = useRef(null);
     const { scope, entranceAnimation } = useTextRevealAnimation();
@@ -80,7 +78,7 @@ const About: FC = () => {
             id="about"
             ref={sectionRef}
         >
-            <div className='px-4 md:px-6 lg:mx-16 pb-12'>
+            <div className='px-4 md:px-6 pt-12 md:pt-56 lg:mx-16 pb-12'>
                 <div ref={scope}>
                     <h2
                         className="text-[32px] md:text-[75px] lg:text-[96px] leading-[1.2] lg:w-[80%] font-serif"
@@ -94,12 +92,12 @@ const About: FC = () => {
                     </h2>
 
                     <p className='font-medium font-sans text-[12px] md:text-[22px] lg:text-[28px] pt-6 lg:pt-9  md:leading-[1.3] lg:w-[80%]'>
-                        <span className='font-semibold font-sans'>IGNITE MEDIA</span> is a creative growth studio led by taste. We specialize in holistic growth solutions for brands across tech, CPG, hospitality, and luxury brands. We specialize in paid social advertising, Google advertising, content creation, and event strategy. Our mission at IGNITE MEDIA is to help beloved brands grow efficiently, sustainably, and profitably.
+                        {/* <span className='font-semibold font-sans'>IGNITE MEDIA</span> is a creative growth studio led by taste. We specialize in holistic growth solutions for brands across tech, CPG, hospitality, and luxury brands. We specialize in paid social advertising, Google advertising, content creation, and event strategy. Our mission at IGNITE MEDIA is to help beloved brands grow efficiently, sustainably, and profitably. */}
                     </p>
                 </div>
 
                 <div className="relative">
-                    <div className="mt-8 md:mt-20">
+                    <div className="mt-8 md:mt-14">
                         <AnimatePresence mode="wait" initial={false}>
                             {abouts.map((about, index) => (
                                 index === testimonialIndex && (
