@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useEffect, useRef } from 'react';
+import { FC, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import useTextRevealAnimation from '@/hooks/useTextRevealAnimation';
 
